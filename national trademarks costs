@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[Taxas Marcas Nacionais](
+	[ID_Taxas_Marcas_Nacionais] [int] NOT NULL,
+	[Serviço] [int] NOT NULL,
+	[Moeda] [int] NOT NULL,
+	[Valor] [money] NOT NULL,
+ CONSTRAINT [PK_Taxas Marcas Nacionais] PRIMARY KEY CLUSTERED 
+(
+	[ID_Taxas_Marcas_Nacionais] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
