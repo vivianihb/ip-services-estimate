@@ -9,3 +9,13 @@ CREATE TABLE [dbo].[Taxas Marcas Nacionais](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+ALTER TABLE [dbo].[Taxas Marcas Nacionais]  WITH CHECK ADD  CONSTRAINT [FK_ID_Moeda] FOREIGN KEY([Moeda])
+REFERENCES [dbo].[Moedas] ([ID_Moeda])
+GO
+ALTER TABLE [dbo].[Taxas Marcas Nacionais] CHECK CONSTRAINT [FK_ID_Moeda]
+GO
+ALTER TABLE [dbo].[Taxas Marcas Nacionais]  WITH CHECK ADD  CONSTRAINT [FK_ID_Servico] FOREIGN KEY([Serviço])
+REFERENCES [dbo].[Servicos Marcas Nacionais] ([ID_Servicos_Marcas_Nacionais])
+GO
+ALTER TABLE [dbo].[Taxas Marcas Nacionais] CHECK CONSTRAINT [FK_ID_Servico]
+GO
